@@ -1,0 +1,286 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F0C8E11153D582C00C9758C /* NSScanner+occheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F0C8E10153D582C00C9758C /* NSScanner+occheck.m */; };
+		4F48DD5714FF5F9D00F5F2E2 /* OCMethordImplementationScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F48DD5614FF5F9D00F5F2E2 /* OCMethordImplementationScanner.m */; };
+		4FC8E94814F79E2F00154054 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC8E94714F79E2F00154054 /* Foundation.framework */; };
+		4FC8E94B14F79E2F00154054 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E94A14F79E2F00154054 /* main.m */; };
+		4FC8E94F14F79E2F00154054 /* occheck.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4FC8E94E14F79E2F00154054 /* occheck.1 */; };
+		4FC8E95F14F79E4300154054 /* OCClassItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E95614F79E4300154054 /* OCClassItem.m */; };
+		4FC8E96014F79E4300154054 /* OCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E95814F79E4300154054 /* OCManager.m */; };
+		4FC8E96114F79E4300154054 /* OCFileScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E95A14F79E4300154054 /* OCFileScanner.m */; };
+		4FC8E96214F79E4300154054 /* OCInterfceScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E95C14F79E4300154054 /* OCInterfceScanner.m */; };
+		4FC8E96314F79E4300154054 /* OCImplementationScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E95E14F79E4300154054 /* OCImplementationScanner.m */; };
+		4FC8E96B14F7A3B000154054 /* NSString+occheck.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FC8E96A14F7A3B000154054 /* NSString+occheck.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		4FC8E94114F79E2F00154054 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+				4FC8E94F14F79E2F00154054 /* occheck.1 in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		4F0C8E0F153D582C00C9758C /* NSScanner+occheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSScanner+occheck.h"; sourceTree = "<group>"; };
+		4F0C8E10153D582C00C9758C /* NSScanner+occheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSScanner+occheck.m"; sourceTree = "<group>"; };
+		4F48DD5514FF5F9D00F5F2E2 /* OCMethordImplementationScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMethordImplementationScanner.h; sourceTree = "<group>"; };
+		4F48DD5614FF5F9D00F5F2E2 /* OCMethordImplementationScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMethordImplementationScanner.m; sourceTree = "<group>"; };
+		4FC8E94314F79E2F00154054 /* occheck */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = occheck; sourceTree = BUILT_PRODUCTS_DIR; };
+		4FC8E94714F79E2F00154054 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		4FC8E94A14F79E2F00154054 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4FC8E94D14F79E2F00154054 /* occheck-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "occheck-Prefix.pch"; sourceTree = "<group>"; };
+		4FC8E94E14F79E2F00154054 /* occheck.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = occheck.1; sourceTree = "<group>"; };
+		4FC8E95514F79E4300154054 /* OCClassItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCClassItem.h; sourceTree = "<group>"; };
+		4FC8E95614F79E4300154054 /* OCClassItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCClassItem.m; sourceTree = "<group>"; };
+		4FC8E95714F79E4300154054 /* OCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCManager.h; sourceTree = "<group>"; };
+		4FC8E95814F79E4300154054 /* OCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCManager.m; sourceTree = "<group>"; };
+		4FC8E95914F79E4300154054 /* OCFileScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCFileScanner.h; sourceTree = "<group>"; };
+		4FC8E95A14F79E4300154054 /* OCFileScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCFileScanner.m; sourceTree = "<group>"; };
+		4FC8E95B14F79E4300154054 /* OCInterfceScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCInterfceScanner.h; sourceTree = "<group>"; };
+		4FC8E95C14F79E4300154054 /* OCInterfceScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCInterfceScanner.m; sourceTree = "<group>"; };
+		4FC8E95D14F79E4300154054 /* OCImplementationScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCImplementationScanner.h; sourceTree = "<group>"; };
+		4FC8E95E14F79E4300154054 /* OCImplementationScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCImplementationScanner.m; sourceTree = "<group>"; };
+		4FC8E96414F79ECA00154054 /* OCConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCConst.h; sourceTree = "<group>"; };
+		4FC8E96914F7A3B000154054 /* NSString+occheck.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+occheck.h"; sourceTree = "<group>"; };
+		4FC8E96A14F7A3B000154054 /* NSString+occheck.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+occheck.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4FC8E94014F79E2F00154054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FC8E94814F79E2F00154054 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4FC8E93814F79E2F00154054 = {
+			isa = PBXGroup;
+			children = (
+				4FC8E94914F79E2F00154054 /* occheck */,
+				4FC8E94614F79E2F00154054 /* Frameworks */,
+				4FC8E94414F79E2F00154054 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4FC8E94414F79E2F00154054 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8E94314F79E2F00154054 /* occheck */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4FC8E94614F79E2F00154054 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8E94714F79E2F00154054 /* Foundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4FC8E94914F79E2F00154054 /* occheck */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8E95514F79E4300154054 /* OCClassItem.h */,
+				4FC8E95614F79E4300154054 /* OCClassItem.m */,
+				4FC8E95714F79E4300154054 /* OCManager.h */,
+				4FC8E95814F79E4300154054 /* OCManager.m */,
+				4FC8E95914F79E4300154054 /* OCFileScanner.h */,
+				4FC8E95A14F79E4300154054 /* OCFileScanner.m */,
+				4FC8E95B14F79E4300154054 /* OCInterfceScanner.h */,
+				4FC8E95C14F79E4300154054 /* OCInterfceScanner.m */,
+				4FC8E95D14F79E4300154054 /* OCImplementationScanner.h */,
+				4FC8E95E14F79E4300154054 /* OCImplementationScanner.m */,
+				4F48DD5514FF5F9D00F5F2E2 /* OCMethordImplementationScanner.h */,
+				4F48DD5614FF5F9D00F5F2E2 /* OCMethordImplementationScanner.m */,
+				4FC8E94A14F79E2F00154054 /* main.m */,
+				4FC8E94E14F79E2F00154054 /* occheck.1 */,
+				4FC8E94C14F79E2F00154054 /* Supporting Files */,
+				4FC8E96414F79ECA00154054 /* OCConst.h */,
+				4FC8E96914F7A3B000154054 /* NSString+occheck.h */,
+				4FC8E96A14F7A3B000154054 /* NSString+occheck.m */,
+				4F0C8E0F153D582C00C9758C /* NSScanner+occheck.h */,
+				4F0C8E10153D582C00C9758C /* NSScanner+occheck.m */,
+			);
+			path = occheck;
+			sourceTree = "<group>";
+		};
+		4FC8E94C14F79E2F00154054 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4FC8E94D14F79E2F00154054 /* occheck-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4FC8E94214F79E2F00154054 /* occheck */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4FC8E95214F79E2F00154054 /* Build configuration list for PBXNativeTarget "occheck" */;
+			buildPhases = (
+				4FC8E93F14F79E2F00154054 /* Sources */,
+				4FC8E94014F79E2F00154054 /* Frameworks */,
+				4FC8E94114F79E2F00154054 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = occheck;
+			productName = occheck;
+			productReference = 4FC8E94314F79E2F00154054 /* occheck */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4FC8E93A14F79E2F00154054 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+				ORGANIZATIONNAME = tencent;
+			};
+			buildConfigurationList = 4FC8E93D14F79E2F00154054 /* Build configuration list for PBXProject "occheck" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 4FC8E93814F79E2F00154054;
+			productRefGroup = 4FC8E94414F79E2F00154054 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4FC8E94214F79E2F00154054 /* occheck */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4FC8E93F14F79E2F00154054 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4FC8E94B14F79E2F00154054 /* main.m in Sources */,
+				4FC8E95F14F79E4300154054 /* OCClassItem.m in Sources */,
+				4FC8E96014F79E4300154054 /* OCManager.m in Sources */,
+				4FC8E96114F79E4300154054 /* OCFileScanner.m in Sources */,
+				4FC8E96214F79E4300154054 /* OCInterfceScanner.m in Sources */,
+				4FC8E96314F79E4300154054 /* OCImplementationScanner.m in Sources */,
+				4FC8E96B14F7A3B000154054 /* NSString+occheck.m in Sources */,
+				4F48DD5714FF5F9D00F5F2E2 /* OCMethordImplementationScanner.m in Sources */,
+				4F0C8E11153D582C00C9758C /* NSScanner+occheck.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4FC8E95014F79E2F00154054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		4FC8E95114F79E2F00154054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		4FC8E95314F79E2F00154054 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "occheck/occheck-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4FC8E95414F79E2F00154054 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "occheck/occheck-Prefix.pch";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4FC8E93D14F79E2F00154054 /* Build configuration list for PBXProject "occheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FC8E95014F79E2F00154054 /* Debug */,
+				4FC8E95114F79E2F00154054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4FC8E95214F79E2F00154054 /* Build configuration list for PBXNativeTarget "occheck" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4FC8E95314F79E2F00154054 /* Debug */,
+				4FC8E95414F79E2F00154054 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4FC8E93A14F79E2F00154054 /* Project object */;
+}

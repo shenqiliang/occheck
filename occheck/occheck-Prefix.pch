@@ -1,0 +1,15 @@
+//
+// Prefix header for all source files of the 'occheck' target in the 'occheck' project
+//
+
+#ifdef __OBJC__
+
+#import <Foundation/Foundation.h>
+#import "OCConst.h"
+#import "NSString+occheck.h"
+#import "NSScanner+occheck.h"
+#endif
+extern int verbose;
+#define V1Log(...) if(verbose>=1) NSLog(@"%s_%d: %@", __func__, __LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define V2Log(...) if(verbose>=2) NSLog(@"%s_%d: %@", __func__, __LINE__,[NSString stringWithFormat:__VA_ARGS__])
+#define V3Log(...) if(verbose>=3) NSLog(@"%s_%d: %@", __func__, __LINE__,[NSString stringWithFormat:__VA_ARGS__])
