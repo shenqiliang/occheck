@@ -47,7 +47,9 @@
                         [removeCommentScanner scanUpToString:@"\"" intoString:nil];
                         while ([removeCommentScanner.string characterAtIndex:[removeCommentScanner scanLocation]-1]=='\\') {
                             [removeCommentScanner scanString:@"\"" intoString:nil];
-                            [removeCommentScanner scanUpToString:@"\"" intoString:nil];
+                            if (![removeCommentScanner scanUpToString:@"\"" intoString:nil]) {
+                                break;
+                            }
                         }
                         [removeCommentScanner scanString:@"\"" intoString:nil];
                         [noCommentCode appendString:@"\"\""];

@@ -13,6 +13,7 @@ int verbose = 0;
 
 int main (int argc, const char * argv[])
 {
+    int ret = 0;
     
     @autoreleasepool {
         // insert code here...
@@ -43,6 +44,9 @@ int main (int argc, const char * argv[])
                     if (![manager checkError]) {
                         printf("给力! 在 %s 中暂没有发现问题。\n",[param UTF8String]);
                     }
+                    else {
+                        ret = -1;
+                    }
                     [manager release];
                 }
             }
@@ -53,6 +57,6 @@ int main (int argc, const char * argv[])
             printf("occheck [文件夹路径] ...\n");
         }
     }
-    return 0;
+    return ret;
 }
 
