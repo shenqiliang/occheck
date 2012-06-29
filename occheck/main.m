@@ -23,7 +23,7 @@ int main (int argc, const char * argv[])
         [set addCharactersInRange:NSMakeRange('a', 'z'-'a'+1)];
         [set addCharactersInRange:NSMakeRange('0', '9'-'0'+1)];
         [set addCharactersInString:@"_"];
-        OCNameCharacterSet = [set copy];
+        OCNameCharacterSet = [set copy]; 
         
         if (argc>1) {
             for (int i = 1; i < argc; i++) {
