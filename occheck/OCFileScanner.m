@@ -10,11 +10,43 @@
 #import "OCInterfceScanner.h"
 #import "OCImplementationScanner.h"
 
+#define SCAN_DANGEROUS 1
+
+NSString *dangerousFunctions[] = {
+    @"gets",
+    @"_getws",
+    @"_getts",
+    @"strcpy",
+    @"lstrcpy",
+    @"lstrcpyA",
+    @"lstrcpyW",
+    @"wcscpy",
+    @"_tcscpy",
+    @"_ftcscpy",
+    @"StrCpy",
+    @"strcat",
+    @"wcscat",
+    @"_mbscat",
+    @"_tcscat",
+    @"StrCat",
+    @"StrCatA",
+    @"StrCatW",
+    @"sprintf",
+    @"wsprintf",
+    @"wsprintfA",
+    @"wsprintfW",
+    @"vsprintf",
+    @"vswprintf",
+    @"swprintf",
+    @"_stprintf"
+};
+
 @implementation OCFileScanner
 @synthesize ocitems;
 - (id)initWithFile:(NSString*)file{
     self = [super init];
     isHeaderFile = [file hasSuffix:@".h"];
+    isObjcFile = [file hasSuffix:@".m"]||[file hasSuffix:@".mm"];
     if (self) {
         @autoreleasepool {
             V1Log(@"Begin check file %@", file);
@@ -69,7 +101,16 @@
                 
                
                 if ([codeText length]) {
-                    {
+                    if(SCAN_DANGEROUS){
+                        for (int i = 0; i < sizeof(dangerousFunctions)/sizeof(dangerousFunctions[1]); i++) {
+                            NSString *dangerousFunc = dangerousFunctions[i];
+                            if ([codeText rangeOfString:dangerousFunc].location!=NSNotFound) {
+                                printf("在%s中有高危函数%s\n",[[file lastPathComponent] UTF8String],[dangerousFunc UTF8String]);
+                                hasDangerousFunction++;
+                            }
+                        }
+                    }
+                    if(isHeaderFile||isObjcFile){
                         NSScanner *scaner = [NSScanner scannerWithString:codeText];
                         while (![scaner isAtEnd]) {
                             [scaner scanUpToString:@"@interface" intoString:nil];
@@ -81,7 +122,7 @@
                             }
                         }
                     }
-                    if(!isHeaderFile){
+                    if(isObjcFile){
                         NSScanner *scaner = [NSScanner scannerWithString:codeText];
                         while (![scaner isAtEnd]) {
                             [scaner scanUpToString:@"@implementation" intoString:nil];

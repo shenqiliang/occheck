@@ -12,6 +12,7 @@
 @interface OCFileScanner : NSObject{
     BOOL isHeaderFile;
     NSMutableArray *ocitems;
+    BOOL isObjcFile;
 }
 
 - (id)initWithFile:(NSString*)file;

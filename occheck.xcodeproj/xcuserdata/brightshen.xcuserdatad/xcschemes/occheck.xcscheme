@@ -62,15 +62,19 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "/Users/brightshen/Desktop/QSWorkSpace"
+            isEnabled = "NO">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "/Users/brightshen/Downloads/test"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/brightshen/QZone"
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
-            argument = "/Users/brightshen/Documents/CSL_proj/trunk/occheck/occheck"
+            argument = "/Users/brightshen/git/occheck/occheck"
             isEnabled = "YES">
          </CommandLineArgument>
          <CommandLineArgument
@@ -79,11 +83,11 @@
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/brightshen/Documents/elife/trunk/ios/movie/Classes"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
             argument = "/Users/brightshen/Documents/elife/trunk/ios/QQGroupon/QQGroupon"
-            isEnabled = "YES">
+            isEnabled = "NO">
          </CommandLineArgument>
       </CommandLineArguments>
       <AdditionalOptions>

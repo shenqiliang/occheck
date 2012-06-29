@@ -11,10 +11,11 @@
 NSCharacterSet *OCNameCharacterSet;
 int verbose = 0;
 
+int hasDangerousFunction = 0;
+
 int main (int argc, const char * argv[])
 {
     int ret = 0;
-    
     @autoreleasepool {
         // insert code here...
         NSMutableCharacterSet *set = [[[NSMutableCharacterSet alloc] init] autorelease];
@@ -41,7 +42,7 @@ int main (int argc, const char * argv[])
                 else{
                     setpriority(PRIO_PROCESS, getpid(), PRIO_DARWIN_BG);
                     OCManager *manager = [[OCManager alloc] initWithDirectory:param];
-                    if (![manager checkError]) {
+                    if (![manager checkError]&&hasDangerousFunction==0) {
                         printf("给力! 在 %s 中暂没有发现问题。\n",[param UTF8String]);
                     }
                     else {

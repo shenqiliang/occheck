@@ -16,7 +16,7 @@
         classItems = [[NSMutableDictionary alloc] init];
         NSArray *files = [[NSFileManager defaultManager] subpathsOfDirectoryAtPath:directory error:nil];
         for (NSString *path in files) {
-            if ([path hasPrefix:@"."]||!([path hasSuffix:@".h"]||[path hasSuffix:@".m"]||[path hasSuffix:@".mm"])) {
+            if ([path hasPrefix:@"."]||!([path hasSuffix:@".h"]||[path hasSuffix:@".m"]||[path hasSuffix:@".mm"]||[path hasSuffix:@".c"]||[path hasSuffix:@".cc"]||[path hasSuffix:@".cpp"])) {
                 continue;
             }
             path = [directory stringByAppendingPathComponent:path];
