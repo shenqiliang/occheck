@@ -110,27 +110,30 @@ NSString *dangerousFunctions[] = {
                             }
                         }
                     }
-                    if(isHeaderFile||isObjcFile){
-                        NSScanner *scaner = [NSScanner scannerWithString:codeText];
-                        while (![scaner isAtEnd]) {
-                            [scaner scanUpToString:@"@interface" intoString:nil];
-                            NSString *interfaceCode = nil;
-                            if ([scaner scanUpToString:@"@end" intoString:&interfaceCode]) {
-                                OCInterfceScanner *interfaceScan = [[OCInterfceScanner alloc] initWithCodeText:[interfaceCode stringByAppendingString:@"\n@end\n"]];
-                                if([interfaceScan.scanItem.name length]) [ocitems addObject:interfaceScan.scanItem];
-                                [interfaceScan release];
+                    
+                    if (!isArc) {
+                        if(isHeaderFile||isObjcFile){
+                            NSScanner *scaner = [NSScanner scannerWithString:codeText];
+                            while (![scaner isAtEnd]) {
+                                [scaner scanUpToString:@"@interface" intoString:nil];
+                                NSString *interfaceCode = nil;
+                                if ([scaner scanUpToString:@"@end" intoString:&interfaceCode]) {
+                                    OCInterfceScanner *interfaceScan = [[OCInterfceScanner alloc] initWithCodeText:[interfaceCode stringByAppendingString:@"\n@end\n"]];
+                                    if([interfaceScan.scanItem.name length]) [ocitems addObject:interfaceScan.scanItem];
+                                    [interfaceScan release];
+                                }
                             }
                         }
-                    }
-                    if(isObjcFile){
-                        NSScanner *scaner = [NSScanner scannerWithString:codeText];
-                        while (![scaner isAtEnd]) {
-                            [scaner scanUpToString:@"@implementation" intoString:nil];
-                            NSString *interfaceCode = nil;
-                            if ([scaner scanUpToString:@"@end" intoString:&interfaceCode]) {
-                                OCImplementationScanner *implementScan = [[OCImplementationScanner alloc] initWithCodeText:[interfaceCode stringByAppendingString:@"\n@end\n"]];
-                                if([implementScan.scanItem.name length]) [ocitems addObject:implementScan.scanItem];
-                                [implementScan release];
+                        if(isObjcFile){
+                            NSScanner *scaner = [NSScanner scannerWithString:codeText];
+                            while (![scaner isAtEnd]) {
+                                [scaner scanUpToString:@"@implementation" intoString:nil];
+                                NSString *interfaceCode = nil;
+                                if ([scaner scanUpToString:@"@end" intoString:&interfaceCode]) {
+                                    OCImplementationScanner *implementScan = [[OCImplementationScanner alloc] initWithCodeText:[interfaceCode stringByAppendingString:@"\n@end\n"]];
+                                    if([implementScan.scanItem.name length]) [ocitems addObject:implementScan.scanItem];
+                                    [implementScan release];
+                                }
                             }
                         }
                     }

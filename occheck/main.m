@@ -13,6 +13,8 @@ int verbose = 0;
 
 int hasDangerousFunction = 0;
 
+BOOL isArc = NO;
+
 int main (int argc, const char * argv[])
 {
     int ret = 0;
@@ -38,14 +40,23 @@ int main (int argc, const char * argv[])
                     if ([param isEqualToString:@"-vvv"]) {
                         verbose = 3;
                     }
+                    if ([param isEqualToString:@"-arc"]) {
+                        isArc = YES;
+                    }
                 }
                 else{
                     setpriority(PRIO_PROCESS, getpid(), PRIO_DARWIN_BG);
                     OCManager *manager = [[OCManager alloc] initWithDirectory:param];
-                    if (![manager checkError]&&hasDangerousFunction==0) {
-                        printf("给力! 在 %s 中暂没有发现问题。\n",[param UTF8String]);
+                    if (![manager checkError]) {
+                        printf("给力! 在 %s 中没有发现内存泄露问题。\n",[param UTF8String]);
                     }
-                    else {
+                    else{
+                        ret = -1;
+                    }
+                    if(hasDangerousFunction==0){
+                        printf("给力! 在 %s 中没有发现高危函数。\n",[param UTF8String]);
+                    }
+                    else{
                         ret = -1;
                     }
                     [manager release];
@@ -55,7 +66,8 @@ int main (int argc, const char * argv[])
         else{
             printf("检查一个目录下的源代码是否存在问题\n");
             printf("使用方法：\n");
-            printf("occheck [文件夹路径] ...\n");
+            printf("occheck [-arc] [文件夹路径] ...\n");
+            printf("-arc 使用ARC的工程，不会检查内存泄漏，仍会检查高危函数。");
         }
     }
     return ret;
