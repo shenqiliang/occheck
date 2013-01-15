@@ -104,7 +104,19 @@ NSString *dangerousFunctions[] = {
                     if(SCAN_DANGEROUS){
                         for (int i = 0; i < sizeof(dangerousFunctions)/sizeof(dangerousFunctions[1]); i++) {
                             NSString *dangerousFunc = dangerousFunctions[i];
-                            if ([codeText rangeOfString:dangerousFunc].location!=NSNotFound) {
+                            NSRange range = [codeText rangeOfString:dangerousFunc];
+                            NSUInteger endIndex = range.location+range.length;
+                            if (range.location!=NSNotFound) {
+                                if (range.location>0) {
+                                    if ([OCNameCharacterSet characterIsMember:[codeText characterAtIndex:range.location-1]]) {
+                                        continue;
+                                    }
+                                }
+                                if (endIndex<[codeText length]) {
+                                    if ([OCNameCharacterSet characterIsMember:[codeText characterAtIndex:endIndex]]) {
+                                        continue;
+                                    }
+                                }
                                 printf("在%s中有高危函数%s\n",[[file lastPathComponent] UTF8String],[dangerousFunc UTF8String]);
                                 hasDangerousFunction++;
                             }

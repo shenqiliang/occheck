@@ -62,6 +62,10 @@
             isEnabled = "NO">
          </CommandLineArgument>
          <CommandLineArgument
+            argument = "/Users/brightshen/Documents/elife/trunk/ios/JLToolKit"
+            isEnabled = "YES">
+         </CommandLineArgument>
+         <CommandLineArgument
             argument = "/Users/brightshen/Desktop/QSWorkSpace"
             isEnabled = "NO">
          </CommandLineArgument>
